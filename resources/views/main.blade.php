@@ -17,7 +17,7 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
 <header class="masthead"
-        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url('/assets/img/af6096570b0c4f37547820aae70f7fd4.jpg') center / cover space;height: 800px;">
+        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url('/assets/img/af6096570b0c4f37547820aae70f7fd4.png') center / cover space;height: 800px;">
     <div class="container">
         <div class="intro-text" style="padding-top: 91px;">
             <div class="intro-heading text-uppercase animate__animated animate__fadeInUp animate__delay-1s"><span
