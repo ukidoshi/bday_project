@@ -123,7 +123,7 @@
     function getGuestHtml(lastId) {
         return "<div class=\"form-group mb-3 guest\" id='guest_"+lastId+"'>\n" +
             "                                <small class=\"form-text flex-grow-1 lead\">Гость:</small>\n" +
-            "                                <div style=\"display: flex;\">\n" +
+            "                                <div style=\"\">\n" +
             "                                    <input class=\"form-control\" type=\"text\" name='name_"+lastId+"' id=\"name_"+lastId+"\"\n" +
             "                                                                   placeholder=\"Фамилия Имя\" required=\"\"\n" +
             "                                                                   style=\"margin-right: 10px;\">\n" +
@@ -137,7 +137,8 @@
             "                                    </div>\n" +
             "                       <a class=\"btn btn-primary delete-btn visually-hidden\" style='margin-left: 10px; height: 38px; margin-top: 15px;' id=\"delete_btn_clicked_"+lastId+"\">Убрать</a>\n" +
             "                                </div>\n" +
-            "                            </div>"
+            "<hr style='color: white'>                            " +
+            "</div>"
     }
 
     $("#addGuestButton").on("click", function () {
