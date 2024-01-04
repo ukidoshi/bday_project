@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bad+Script&amp;display=swap">
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -16,13 +17,13 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
 <header class="masthead"
-        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url('/assets/img/af6096570b0c4f37547820aae70f7fd4.jpg') center / cover space;height: 600px;">
+        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url('/assets/img/af6096570b0c4f37547820aae70f7fd4.jpg') center / cover space;height: 800px;">
     <div class="container">
         <div class="intro-text" style="padding-top: 91px;">
             <div class="intro-heading text-uppercase animate__animated animate__fadeInUp animate__delay-1s"><span
-                    style="text-align: center;font-size: 30px;line-height: 0px;">Приглашение на юбилей</span></div>
-            <div class="intro-lead-in animate__animated animate__fadeInUp animate__slow animate__delay-2s"><span>Дорогие гости!<br><br>Приглашаю на свой юбилей</span></div>
-            <div class="intro-lead-in animate__animated animate__fadeInUp animate__slow animate__delay-3s"><span>Буду рад провести этот вечер в близком кругу!</span></div>
+                    style="text-align: center;font-size: 30px;line-height: 0px; font-family: 'Bad Script',serif">Приглашение на юбилей</span></div>
+            <div class="intro-lead-in animate__animated animate__fadeInUp animate__slow animate__delay-2s" style="font-family: 'Bad Script',serif"><span>Дорогие гости!<br><br>Приглашаю на свой юбилей</span></div>
+            <div class="intro-lead-in animate__animated animate__fadeInUp animate__slow animate__delay-3s" style="margin-top: 100px; font-family: 'Bad Script',serif;"><span>Буду рад провести этот вечер в близком кругу!</span></div>
         </div>
     </div>
 </header>
