@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Приглашение на юбилей</title>
-    <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
 <header class="masthead"
-        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url(&quot;/assets/img/af6096570b0c4f37547820aae70f7fd4.jpg&quot;) center / cover space;height: 600px;">
+        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url('/assets/img/af6096570b0c4f37547820aae70f7fd4.jpg') center / cover space;height: 600px;">
     <div class="container">
         <div class="intro-text" style="padding-top: 91px;">
             <div class="intro-heading text-uppercase"><span
