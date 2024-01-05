@@ -77,7 +77,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="text-uppercase section-heading">жду вас!</h2>
-                <h3 class="text-muted section-subheading">Ниже Вы сможете принять приглашение, заполнив данные о
+                <h3 class="text-muted section-subheading ending-message">Ниже Вы сможете принять приглашение, заполнив данные о
                     себе.<br><br>Также, вы можете принять приглашение за других.</h3>
             </div>
         </div>
@@ -127,7 +127,8 @@
 
     function getGuestHtml(lastId) {
         return "<div class=\"form-group mb-3 guest\" id='guest_"+lastId+"'>\n" +
-            "                                <small class=\"form-text flex-grow-1 lead\">Гость:</small>\n" +
+            "                                <small class=\"form-text flex-grow-1 lead\">Гость:</small>" +
+            "<small class=\"form-text flex-grow-1 lead warning-small text-warning text_warning_"+lastId+" visually-hidden\"><br>Заполните фамилию и имя!</small>\n" +
             "                                <div style=\"\">\n" +
             "                                    <input class=\"form-control\" type=\"text\" name='name_"+lastId+"' id=\"name_"+lastId+"\"\n" +
             "                                                                   placeholder=\"Фамилия Имя\" required=\"\"\n" +
@@ -162,6 +163,11 @@
     $(".guests").append(getGuestHtml(lastId))
         .on("click", ".delete-btn", function () {
             let deleted_id = $(this).parent().parent().remove();
+            if (lastId >= 2) {
+                $(".delete-btn").removeClass("visually-hidden");
+            } else {
+                $(".delete-btn").addClass("visually-hidden");
+            }
         })
         .on("click", ".dropdown-item", function () {
             let full_attrId = $(this).attr("id");
@@ -183,7 +189,23 @@
             url: "{{ env('APP_URL') }}/api/addGuests",
             data: sendData,
             success: function (success) {
+                $('#contactFormDiv').addClass("visually-hidden")
                 console.log(success)
+                if (success.status !== 'success') {
+                    $('.ending-message').html("Произошла ошибка!<br>Попробуйте чуть позже.")
+                }
+                var names = "";
+                for (let i = 1; i <= lastId*2; i++) {
+
+                    if (sendData[i-1]["value"]) {
+                        console.log(sendData[i-1]["name"].slice(0,4))
+                        if (sendData[i-1]["name"].slice(0,4) === "name") {
+                            names += sendData[i-1]["value"] + "<br>"
+                        }
+                    }
+                }
+
+                $('.ending-message').html("Приглашения приняты!<br><br><div style='color: white'>"+names+"</div>")
             }
         });
     })
