@@ -20,5 +20,5 @@ Route::get('/', function () {
 
 Route::get('/list', [GuestController::class, 'getGuests']);
 
-Route::post('/delete', 'GuestControler@deleteGuest');
+
 Route::post('/', 'GuestController@addGuests');
