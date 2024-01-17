@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Guest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
@@ -32,8 +33,21 @@ class GuestController extends Controller
     }
 
     public function getGuests(Request $request) {
-        $guests = Guest::all();
-        dd($guests);
-        return view('list');
+        $guests = Guest::all()->toArray();
+        $result = [];
+        foreach ($guests as $guest) {
+            $result[] = [
+                "id" => $guest['id'],
+                "name" => $guest['name'],
+                "type" => $guest['type'],
+                "created_at" => Carbon::parse($guest['created_at'])->format("j.m.Y в h:i:s"),
+            ];
+        }
+        return view('list', ["guests" => $result]);
+    }
+
+    public function deleteGuest(Request $request) {
+        $guest_id = $request->id;
+        Guest::where('id', $guest_id)->delete();
     }
 }
