@@ -30,4 +30,10 @@ class GuestController extends Controller
         ]);
 
     }
+
+    public function getGuests(Request $request) {
+        $guests = Guest::all();
+        dd($guests);
+        return view('list');
+    }
 }

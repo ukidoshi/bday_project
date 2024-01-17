@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/list', [GuestController::class, 'getGuests']);
+
 Route::post('/', 'GuestController@addGuests');
