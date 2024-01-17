@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bad+Script&amp;display=swap">
+    <link rel="stylesheet" href="/assets/css/bickham_script_three.css">
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -17,13 +18,16 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
 <header class="masthead"
-        style="background: linear-gradient(black 0%, transparent 57%, black 98%), url('/assets/img/af6096570b0c4f37547820aae70f7fd4.png') center / cover space;height: 800px;">
+        style="background: url(&quot;/assets/img/46126161-81A7-40ED-8.png&quot;) center / cover repeat;height: 500px;">
     <div class="container">
         <div class="intro-text" style="padding-top: 91px;">
-            <div class="intro-heading text-uppercase animate__animated animate__fadeInUp animate__delay-1s"><span
-                    style="text-align: center;font-size: 30px;line-height: 0px; font-family: 'Bad Script',serif">Приглашение на юбилей</span></div>
-            <div class="intro-lead-in animate__animated animate__fadeInUp animate__slow animate__delay-2s" style="font-family: 'Bad Script',serif"><span>Дорогие гости!<br><br>Приглашаю на свой юбилей</span></div>
-            <div class="intro-lead-in animate__animated animate__fadeInUp animate__slow animate__delay-3s" style="margin-top: 100px; font-family: 'Bad Script',serif;"><span>Буду рад провести этот вечер в близком кругу!</span></div>
+            <div class="intro-heading"><span
+                    style="text-align: center; color: rgb(0,0,0); font-family: 'Bickham Script Three',Arial,sans-serif; font-weight: 600;">Приглашение на юбилей</span>
+            </div>
+            <div class="intro-lead-in"><span style="color: rgb(0,0,0);">Приглашаю на свое торжество посвященное моему 70-летнему юбилею!</span>
+            </div>
+            <div class="intro-lead-in"><span
+                    style="color: rgb(0,0,0);">Буду рад провести этот вечер в близком кругу!</span></div>
         </div>
     </div>
 </header>
@@ -32,39 +36,37 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-sm-4">
                 <div class="team-member"><img class="rounded-circle mx-auto"
-                                              src="{{asset('assets/img/team/1464717019_oorzhak-valeriy-okpan-oolovich.jpg')}}">
-                    <h4>Ооржак Валерий Окпан-оолович</h4>
-                    <p class="text-muted">Кандидат экономических наук, старший научный сотрудник лаборатории
-                        региональной экономики, Тувинский институт комплексного освоения природных ресурсов, Сибирского
-                        отделения РАН. </p>
+                                              src="/assets/img/team/1464717019_oorzhak-valeriy-okpan-oolovich.jpg"><h4
+                        style="padding-bottom: 41px;">Ооржак Валерий Окпан-оолович</h4><h4>Дорогие гости!</h4>
+                    <p style="padding-top: 12px;">Спешу пригласить Вас на торжество, посвящённое моему 70-летнему
+                        юбилею, которое состоится</p>
+                    <p style="font-weight: bold;">23-го февраля 2024 года</p>
+                    <p>Этот праздник мне хотелось бы отметить в кругу дорогих мне людей, в атмосфере любви, радости и
+                        веселья. И Вы, несомненно, сделаете этот день ярче и прекраснее.<br><br>С нетерпением жду
+                        счастливой встречи, Ваших добрых и искренних улыбок, тёплых слов и весёлого настроения.<br><br>Надеюсь,
+                        Вы обязательно придёте и сможете превратить мой праздник в самый памятный и радостный день!</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="about">
+<section id="about-1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="text-uppercase">Когда и где</h2>
-                <h3 class="text-muted section-subheading">___________________________________</h3>
-            </div>
+            <div class="col-lg-12 text-center"><h2 class="text-uppercase">Место проведения</h2>
+                <h3 class="text-muted section-subheading">___________________________________</h3></div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-group timeline">
                     <li class="list-group-item">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/assets/img/about/1.jpg">
-                        </div>
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>23-го февраля</h4>
-                                <h4 class="subheading">В ресторане "Ресторан"</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted" style="text-align: center;">Адрес: ул. Такая-то, д. 12<br><br>&nbsp;
-                                    -&nbsp; в 19:00&nbsp; -</p>
-                            </div>
+                            <div class="timeline-heading"><h4 class="subheading">Ресторан "Аристократ"</h4></div>
+                            <div class="timeline-body"><p class="text-muted"
+                                                          style="text-align: center;">Адрес: ул.
+                                    Каа-хем, д. 100</p></div>
+                            <div class="timeline-body"><h4 class="subheading">- Начало в
+                                    17:00 -</h4></div>
                         </div>
                     </li>
                 </ul>
@@ -72,14 +74,14 @@
         </div>
     </div>
 </section>
-<section id="contact">
+<section id="contact" style="background: rgb(248,249,250);">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="text-uppercase section-heading">жду вас!</h2>
+            <div class="col-lg-12 text-center"><h2 class="text-uppercase section-heading" style="color: rgb(0,0,0);">жду
+                    вас!</h2>
                 <h3 class="text-muted section-subheading ending-message">Ниже Вы сможете принять приглашение, заполнив данные о
-                    себе.<br><br>Также, вы можете принять приглашение за других.</h3>
-            </div>
+                    себе.<br><br>Также, вы можете принять приглашение за несколько человек.
+                </h3></div>
         </div>
         <div class="row">
             <div class="col-lg-12" id="contactFormDiv">
@@ -92,7 +94,7 @@
                         <div class="col-lg-12 text-end">
                             <div id="success"></div>
                             <a class="btn btn-primary btn-xl text-uppercase" id="addGuestButton"
-                                    style="width: 106.078px;height: 71px;text-align: center;font-size: 12px;padding-left: 10px;padding-right: 10px;">
+                               style="width: 106.078px;height: 71px;text-align: center;font-size: 12px;padding-left: 10px;padding-right: 10px;">
                                 Добавить гостя
                             </a>
                         </div>
@@ -108,13 +110,16 @@
         </div>
     </div>
 </section>
-<footer>
+<section id="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Nachyn Saryglar 2024</span></div>
+            <div class="col-lg-12 text-center"><h2 style="font-family: 'Bickham Script Three',Arial,sans-serif; font-weight: 600; font-size: 40px;">Буду рад видеть Вас на празднике!</h2>
+                <h3 class="text-muted section-subheading" style="margin-bottom: 15px;">
+                    ___________________________________</h3>
+                <p>С уважением,<br>Ооржак Валерий Окпан-оолович</p></div>
         </div>
     </div>
-</footer>
+</section>
 <script
         src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -143,7 +148,7 @@
             "                                    </div>\n" +
             "                       <a class=\"btn btn-primary delete-btn visually-hidden\" style='margin-left: 10px; height: 38px; margin-top: 15px;' id=\"delete_btn_clicked_"+lastId+"\">Убрать</a>\n" +
             "                                </div>\n" +
-            "<hr style='color: white'>                            " +
+            "<hr style='color: black'>                            " +
             "</div>"
     }
 
@@ -198,14 +203,14 @@
                 for (let i = 1; i <= lastId*2; i++) {
 
                     if (sendData[i-1]["value"]) {
-                        console.log(sendData[i-1]["name"].slice(0,4))
+                        // console.log(sendData[i-1]["name"].slice(0,4))
                         if (sendData[i-1]["name"].slice(0,4) === "name") {
                             names += sendData[i-1]["value"] + "<br>"
                         }
                     }
                 }
 
-                $('.ending-message').html("Приглашения приняты!<br><br><div style='color: white'>"+names+"</div>")
+                $('.ending-message').html("Приглашения приняты!<br><br><div style=''>"+names+"</div>")
             }
         });
     })
