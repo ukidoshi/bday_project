@@ -35,7 +35,7 @@ class GuestController extends Controller
 
     public function getGuests(Request $request) {
         $guests = Guest::all()->toArray();
-        $tz = CarbonTimeZone::create('+03:00');
+        $tz = CarbonTimeZone::create('-08:00');
         $result = [];
         foreach ($guests as $guest) {
             $result[] = [
