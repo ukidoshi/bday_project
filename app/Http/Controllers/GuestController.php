@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Guest;
 use Carbon\Carbon;
+use Carbon\CarbonTimeZone;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
@@ -34,13 +35,14 @@ class GuestController extends Controller
 
     public function getGuests(Request $request) {
         $guests = Guest::all()->toArray();
+        $tz = CarbonTimeZone::create('+03:00');
         $result = [];
         foreach ($guests as $guest) {
             $result[] = [
                 "id" => $guest['id'],
                 "name" => $guest['name'],
                 "type" => $guest['type'],
-                "created_at" => Carbon::parse($guest['created_at'])->format("j.m.Y в h:i:s"),
+                "created_at" => Carbon::parse($guest['created_at'])->setTimezone($tz)->format("j.m.Y в h:i:s"),
             ];
         }
         return view('list', ["guests" => $result]);
