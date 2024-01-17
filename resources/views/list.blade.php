@@ -27,8 +27,8 @@
                     </thead>
                     <tbody>
                     @foreach ($guests as $guest)
-                        <tr id="guest_{{ $guest["id"] }}">
-                            <td>{{ $guest['name'] }}</td>
+                        <tr id="guest_{{ $guest["id"] }}" class="">
+                            <td id="name_{{ $guest["id"] }}">{{ $guest['name'] }}</td>
                             <td>
                                 @if($guest['type'] == 'adult')
                                     Взрослый
@@ -58,15 +58,21 @@
     crossorigin="anonymous"></script>
 <script type="text/javascript">
     $('.delete-btn').on('click', function () {
-        let sendData = new Map([
-            ['id', $(this).attr('id')]
-        ]);
+        let guest_id = $(this).attr('id')
+
+        if (confirm("Вы уверены, что хотите удалить данного гостя?: "+$('#name_'+guest_id).html()) !== true) {
+            return;
+        }
+        let sendData = {
+            "id": guest_id,
+        }
         $.ajax({
             type: "POST",
-            url: "{{ env('APP_URL') }}/api/deleteGuest",
+            url: "{{ env('APP_URL') }}/api/delete",
             data: sendData,
             success: function (success) {
-                $(this).remove();
+                $('#guest_'+guest_id).addClass("visually-hidden");
+                console.log('#guest_'+guest_id+'deleted')
             }
         });
     })

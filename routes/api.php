@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('addGuests', [GuestController::class, 'addGuests']);
-Route::post('delete', 'GuestControler@deleteGuest');
+Route::post('delete', [GuestController::class, 'deleteGuest']);

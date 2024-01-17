@@ -47,7 +47,7 @@ class GuestController extends Controller
     }
 
     public function deleteGuest(Request $request) {
-        $guest_id = $request->id;
+        $guest_id = $request->post('id');
         Guest::where('id', $guest_id)->delete();
     }
 }
