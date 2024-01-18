@@ -75,8 +75,7 @@
             url: "{{ env('APP_URL') }}/api/delete",
             data: sendData,
             success: function (success) {
-                $('#guest_'+guest_id).addClass("visually-hidden");
-                console.log('#guest_'+guest_id+'deleted')
+                location.reload();
             }
         });
     })
