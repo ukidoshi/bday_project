@@ -79,10 +79,10 @@
             }
         });
 
-        setInterval(function () {
+        setInterval(()=>{
             console.log('reload list')
             location.reload();
-        }, 1000)
+        }, 5000);
     })
 </script>
 </body>
