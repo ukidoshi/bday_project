@@ -21,12 +21,13 @@
         style="background: url(&quot;/assets/img/46126161-81A7-40ED-8.png&quot;) center / cover repeat;height: 500px;">
     <div class="container">
         <div class="intro-text" style="padding-top: 91px;">
-            <div class="intro-heading"><span
+            <div class="intro-heading animate__animated animate__delay-1s animate__slow animate__fadeIn"><span
                     style="text-align: center; color: rgb(0,0,0); font-family: 'Bickham Script Three',Arial,sans-serif; font-weight: 600;">Приглашение на юбилей</span>
             </div>
-            <div class="intro-lead-in"><span style="color: rgb(0,0,0);">Приглашаю на свое торжество посвященное моему 70-летнему юбилею!</span>
+            <div class="intro-lead-in animate__animated animate__delay-2s animate__slow animate__fadeIn"><span
+                    style="color: rgb(0,0,0);">Приглашаю на свое торжество посвященное моему 70-летнему юбилею!</span>
             </div>
-            <div class="intro-lead-in"><span
+            <div class="intro-lead-in animate__animated animate__delay-3s animate__slow animate__fadeIn"><span
                     style="color: rgb(0,0,0);">Буду рад провести этот вечер в близком кругу!</span></div>
         </div>
     </div>
@@ -34,11 +35,9 @@
 <section class="bg-light" id="team">
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div class="col-sm-4">
-                <div class="team-member">
-{{--                    player--}}
-                </div>
-            </div>
+            <div id="player" class=""></div>
+            Запустить музыку
+            
         </div>
     </div>
 </section>
@@ -48,7 +47,7 @@
             <div class="col-sm-4">
                 <div class="team-member"><img class="rounded-circle mx-auto"
                                               src="/assets/img/team/1464717019_oorzhak-valeriy-okpan-oolovich.jpg"><h4
-                        style="padding-bottom: 41px;">Ооржак Валерий Окпан-оолович</h4><h4>Дорогие гости!</h4>
+                        style="padding-bottom: 41px;">Валерий Ооржак Окпан-оолович</h4><h4>Дорогие гости!</h4>
                     <p style="padding-top: 12px;">Спешу пригласить Вас на торжество, посвящённое моему 70-летнему
                         юбилею, которое состоится</p>
                     <p style="font-weight: bold;">23-го февраля 2024 года</p>
@@ -90,7 +89,8 @@
         <div class="row">
             <div class="col-lg-12 text-center"><h2 class="text-uppercase section-heading" style="color: rgb(0,0,0);">жду
                     вас!</h2>
-                <h3 class="text-muted section-subheading ending-message">Ниже Вы сможете принять приглашение, заполнив данные о
+                <h3 class="text-muted section-subheading ending-message">Ниже Вы сможете принять приглашение, заполнив
+                    данные о
                     себе.<br><br>Также, вы можете принять приглашение за несколько человек.
                 </h3></div>
         </div>
@@ -124,40 +124,54 @@
 <section id="about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center"><h2 style="font-family: 'Bickham Script Three',Arial,sans-serif; font-weight: 600; font-size: 40px;">Буду рад видеть Вас на празднике!</h2>
+            <div class="col-lg-12 text-center"><h2
+                    style="font-family: 'Bickham Script Three',Arial,sans-serif; font-weight: 600; font-size: 40px;">
+                    Буду рад видеть Вас на празднике!</h2>
                 <h3 class="text-muted section-subheading" style="margin-bottom: 15px;">
                     ___________________________________</h3>
-                <p>С уважением,<br>Ооржак Валерий Окпан-оолович</p></div>
+                <p>С уважением,<br>Валерий Ооржак Окпан-оолович</p></div>
         </div>
     </div>
 </section>
 <script
-        src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/playerjs.js"></script>
 <script src="/assets/js/script.min.js"></script>
 <script type="text/javascript">
+    var player = new Playerjs({id:"player",ready:"PlayerReady", file:"/assets/img/music.mp3"});
+
+    function PlayerReady(id){
+        console.log("ready")
+        $("#play_btn").on("click", function (){
+            console.log("play")
+            player.api("toggle");
+        });
+    }
+
+
 
     var lastId = 1;
 
     function getGuestHtml(lastId) {
-        return "<div class=\"form-group mb-3 guest\" id='guest_"+lastId+"'>\n" +
+        return "<div class=\"form-group mb-3 guest\" id='guest_" + lastId + "'>\n" +
             "                                <small class=\"form-text flex-grow-1 lead\">Гость:</small>" +
-            "<small class=\"form-text flex-grow-1 lead warning-small text-warning text_warning_"+lastId+" visually-hidden\"><br>Заполните фамилию и имя!</small>\n" +
+            "<small class=\"form-text flex-grow-1 lead warning-small text-warning text_warning_" + lastId + " visually-hidden\"><br>Заполните фамилию и имя!</small>\n" +
             "                                <div style=\"\">\n" +
-            "                                    <input class=\"form-control\" type=\"text\" name='name_"+lastId+"' id=\"name_"+lastId+"\"\n" +
+            "                                    <input class=\"form-control\" type=\"text\" name='name_" + lastId + "' id=\"name_" + lastId + "\"\n" +
             "                                                                   placeholder=\"Фамилия Имя\" required=\"\"\n" +
             "                                                                   style=\"margin-right: 10px;\">\n" +
             "                                    <div class=\"dropdown\" style=\"margin-top: 15px;\">\n" +
-            "                                        <button class=\"btn btn-primary dropdown-toggle\" name='dropdown_button_"+lastId+"' aria-expanded=\"false\"\n" +
-            "                                                data-bs-toggle=\"dropdown\" type=\"button\" id=\"dropdown_button_"+lastId+"\">Взрослый" +
+            "                                        <button class=\"btn btn-primary dropdown-toggle\" name='dropdown_button_" + lastId + "' aria-expanded=\"false\"\n" +
+            "                                                data-bs-toggle=\"dropdown\" type=\"button\" id=\"dropdown_button_" + lastId + "\">Взрослый" +
             "                                        </button>\n" +
-            "                                        <input type='text' value='adult' class='visually-hidden hidden_input_guest_type' name='guest_type_"+lastId+"'>\n" +
-            "                                        <div class=\"dropdown-menu\"><a class=\"dropdown-item\" id=\"adult_dropdown_clicked_"+lastId+"\">Взрослый</a><a\n" +
-            "                                                class=\"dropdown-item\" id=\"child_dropdown_clicked_"+lastId+"\">Ребенок</a></div>\n" +
+            "                                        <input type='text' value='adult' class='visually-hidden hidden_input_guest_type' name='guest_type_" + lastId + "'>\n" +
+            "                                        <div class=\"dropdown-menu\"><a class=\"dropdown-item\" id=\"adult_dropdown_clicked_" + lastId + "\">Взрослый</a><a\n" +
+            "                                                class=\"dropdown-item\" id=\"child_dropdown_clicked_" + lastId + "\">Ребенок</a></div>\n" +
             "                                    </div>\n" +
-            "                       <a class=\"btn btn-primary delete-btn visually-hidden\" style='margin-left: 10px; height: 38px; margin-top: 15px;' id=\"delete_btn_clicked_"+lastId+"\">Убрать</a>\n" +
+            "                       <a class=\"btn btn-primary delete-btn visually-hidden\" style='margin-left: 10px; height: 38px; margin-top: 15px;' id=\"delete_btn_clicked_" + lastId + "\">Убрать</a>\n" +
             "                                </div>\n" +
             "<hr style='color: black'>                            " +
             "</div>"
@@ -187,14 +201,14 @@
         })
         .on("click", ".dropdown-item", function () {
             let full_attrId = $(this).attr("id");
-            let guest = full_attrId.slice(0,5);
-            let id = full_attrId.slice(23,25);
+            let guest = full_attrId.slice(0, 5);
+            let id = full_attrId.slice(23, 25);
             if (guest === "adult") {
                 $(".hidden_input_guest_type").val("adult");
-                $("#dropdown_button_"+id).text("Взрослый");
+                $("#dropdown_button_" + id).text("Взрослый");
             } else {
                 $(".hidden_input_guest_type").val("child");
-                $("#dropdown_button_"+id).text("Ребенок");
+                $("#dropdown_button_" + id).text("Ребенок");
             }
         });
 
@@ -211,17 +225,17 @@
                     $('.ending-message').html("Произошла ошибка!<br>Попробуйте чуть позже.")
                 }
                 var names = "";
-                for (let i = 1; i <= lastId*2; i++) {
+                for (let i = 1; i <= lastId * 2; i++) {
 
-                    if (sendData[i-1]["value"]) {
+                    if (sendData[i - 1]["value"]) {
                         // console.log(sendData[i-1]["name"].slice(0,4))
-                        if (sendData[i-1]["name"].slice(0,4) === "name") {
-                            names += sendData[i-1]["value"] + "<br>"
+                        if (sendData[i - 1]["name"].slice(0, 4) === "name") {
+                            names += sendData[i - 1]["value"] + "<br>"
                         }
                     }
                 }
 
-                $('.ending-message').html("Приглашения приняты!<br><br><div style=''>"+names+"</div>")
+                $('.ending-message').html("Приглашения приняты!<br><br><div style=''>" + names + "</div>")
             }
         });
     })
