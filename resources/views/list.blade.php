@@ -61,6 +61,11 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"></script>
 <script type="text/javascript">
+    setInterval(()=>{
+        console.log('reload list')
+        location.reload();
+    }, 5000);
+    
     $('.delete-btn').on('click', function () {
         let guest_id = $(this).attr('id')
 
@@ -78,11 +83,6 @@
                 location.reload();
             }
         });
-
-        setInterval(()=>{
-            console.log('reload list')
-            location.reload();
-        }, 5000);
     })
 </script>
 </body>
