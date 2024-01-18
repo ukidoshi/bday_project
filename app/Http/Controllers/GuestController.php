@@ -44,7 +44,7 @@ class GuestController extends Controller
                 "id" => $guest['id'],
                 "name" => $guest['name'],
                 "type" => $guest['type'],
-                "created_at" => Carbon::parse($guest['created_at'])->setTimezone($tz)->format("j.m.Y в h:i:s"),
+                "created_at" => Carbon::parse($guest['created_at'])->setTimezone($tz)->format("j.m.Y в H:i:s"),
             ];
         }
         return view('list', ["guests" => $result, "adults" => $adults_count, "childs" => $childs_count]);
