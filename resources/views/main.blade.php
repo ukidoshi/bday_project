@@ -35,6 +35,17 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-sm-4">
+                <div class="team-member">
+{{--                    player--}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light" id="team">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-4">
                 <div class="team-member"><img class="rounded-circle mx-auto"
                                               src="/assets/img/team/1464717019_oorzhak-valeriy-okpan-oolovich.jpg"><h4
                         style="padding-bottom: 41px;">Ооржак Валерий Окпан-оолович</h4><h4>Дорогие гости!</h4>
