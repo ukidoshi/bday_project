@@ -78,6 +78,11 @@
                 location.reload();
             }
         });
+
+        setInterval(function () {
+            console.log('reload list')
+            location.reload();
+        }, 1000)
     })
 </script>
 </body>
