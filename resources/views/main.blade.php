@@ -37,7 +37,7 @@
         <div class="row justify-content-center align-items-center">
             <div id="player" class=""></div>
             Запустить музыку
-            
+
         </div>
     </div>
 </section>

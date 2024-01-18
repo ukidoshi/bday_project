@@ -34,8 +34,10 @@ class GuestController extends Controller
     }
 
     public function getGuests(Request $request) {
-        $guests = Guest::all()->toArray();
-        $tz = CarbonTimeZone::create('-05:00');
+        $guests = Guest::all();
+        $tz = CarbonTimeZone::create('Asia/Krasnoyarsk');
+        $childs_count = $guests->where('type', 'child')->count();
+        $adults_count = $guests->where('type', 'adult')->count();
         $result = [];
         foreach ($guests as $guest) {
             $result[] = [
@@ -45,7 +47,7 @@ class GuestController extends Controller
                 "created_at" => Carbon::parse($guest['created_at'])->setTimezone($tz)->format("j.m.Y в h:i:s"),
             ];
         }
-        return view('list', ["guests" => $result]);
+        return view('list', ["guests" => $result, "adults" => $adults_count, "childs" => $childs_count]);
     }
 
     public function deleteGuest(Request $request) {

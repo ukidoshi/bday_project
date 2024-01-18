@@ -11,6 +11,10 @@
 <body>
 <div style="margin-top: 25px;">
     <div class="container">
+        <div class="row"><b>Всего гостей: {{ count($guests) }}</b></div>
+        <div class="row">Взрослых: {{ $adults }}</div>
+        <div class="row">Детей: {{ $childs }}</div>
+        <hr>
         <div class="row">
             <div class="col-md-4"><h2 style="width: 343px;">Список гостей</h2></div>
         </div>
